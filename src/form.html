@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleForm.css">
+     <link rel="shortcut icon" href="Icone/talheres.png" type="image/x-icon">
+    <title>Formulário</title>
+</head>
+
+<body style="overflow: hidden;"> 
+
+    <div id="form-container">
+
+        <div class="imagem">
+            <img src="Icone/Ilustracao de entrega.png" alt="">
+        </div>
+
+        <div id="formulario">
+  <h3>Processo de finalização de pedido</h3>
+
+  <div id="form">
+    <form id="finalizar" action="" onsubmit="validar(event)">
+
+      <div class="campo-duplo">
+        <div>
+          <label for="nome">Primeiro nome</label>
+          <input type="text" id="nome" oninput="limparErro('erro-nome')">
+          <span id="erro-nome"></span>
+        </div>
+        <div>
+          <label for="sbnome">Sobrenome</label>
+          <input type="text" id="sbnome" oninput="limparErro('erro-sbnome')">
+          <span id="erro-sbnome"></span>
+        </div>
+      </div>
+
+      <div class="campo-simples">
+        <label for="ende">Endereço (Bairro, Rua)</label>
+        <input type="text" id="ende">
+      </div>
+
+      <div class="campo-simples">
+        <label for="prefe">Ponto de referência (opcional)</label>
+        <input type="text" id="prefe">
+      </div>
+
+      <div class="campo-municipio">
+        <label for="muni">Município</label>
+        <input type="text" id="muni">
+        <span id="erro-muni"></span>
+      </div>
+
+      <div class="campo-duplo">
+        <div>
+          <label for="telefone">Telefone principal</label>
+          <input type="text" id="telefone" oninput="limparErro('erro-tel')">
+          <span id="erro-tel"></span>
+        </div>
+        <div>
+          <label for="telefoneafirm">Telefone alternativo</label>
+          <input type="text" id="telefoneafirm" oninput="limparErro('erro-telalt')">
+          <span id="erro-telalt"></span>
+        </div>
+      </div>
+
+      <div class="botoes">
+        <button type="submit">Finalizar pedido</button>
+        <a href="index.html"> <button type="button">Cancelar pedido</button> </a>
+      </div>
+      <p id="msg-sucesso"></p>
+    </form>
+  </div>
+</div>
+
+    </div>
+
+    <script src="form.js"></script>
+</body>
+
+</html>
